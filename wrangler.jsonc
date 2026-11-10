@@ -14,7 +14,7 @@
       "binding": "DB",
       "database_name": "money-app",
       // แทนที่ด้วย id จริงจาก: npx wrangler d1 create money-app
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "235abab1-55b2-4512-8f70-c77689654120",
       "migrations_dir": "migrations"
     }
   ],
@@ -23,7 +23,7 @@
       // ใช้เก็บข้อมูล OAuth ของ connector (ชื่อ binding ต้องเป็น OAUTH_KV)
       "binding": "OAUTH_KV",
       // แทนที่ด้วย id จริงจาก: npx wrangler kv namespace create OAUTH_KV
-      "id": "00000000000000000000000000000000"
+      "id": "1116e2a1e5994de9a4063574ead78961"
     }
   ],
   "observability": { "enabled": true }
