@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "money-app",
+  // worker.ts ห่อ Next.js (OpenNext) ด้วย OAuth + MCP + API
+  "main": "worker.ts",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "money-app",
+      // แทนที่ด้วย id จริงจาก: npx wrangler d1 create money-app
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      // ใช้เก็บข้อมูล OAuth ของ connector (ชื่อ binding ต้องเป็น OAUTH_KV)
+      "binding": "OAUTH_KV",
+      // แทนที่ด้วย id จริงจาก: npx wrangler kv namespace create OAUTH_KV
+      "id": "00000000000000000000000000000000"
+    }
+  ],
+  "observability": { "enabled": true }
+}
