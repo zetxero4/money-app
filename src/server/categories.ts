@@ -20,7 +20,7 @@ export const DEFAULT_CATEGORIES: CategorySeed[] = [
     name: "เครื่องดื่ม/กาแฟ",
     kind: "expense",
     icon: "coffee",
-    keywords: ["กาแฟ", "ชา", "ชานม", "น้ำ", "โกโก้", "ลาเต้", "อเมริกาโน่", "starbucks", "amazon", "นม"],
+    keywords: ["กาแฟ", "ชา", "ชานม", "ชาไข่มุก", "ไข่มุก", "ชาเย็น", "น้ำปั่น", "น้ำ", "โกโก้", "ลาเต้", "อเมริกาโน่", "starbucks", "amazon", "นม"],
   },
   {
     name: "เดินทาง",

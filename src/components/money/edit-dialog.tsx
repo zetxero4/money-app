@@ -15,6 +15,7 @@ interface Props {
   categories: Category[];
   onClose: () => void;
   onSaved: (tx: Transaction) => void;
+  onDelete: (tx: Transaction) => void;
 }
 
 export function EditDialog(props: Props) {
@@ -30,7 +31,7 @@ export function EditDialog(props: Props) {
   );
 }
 
-function EditForm({ tx, categories, onClose, onSaved }: Props & { tx: Transaction }) {
+function EditForm({ tx, categories, onClose, onSaved, onDelete }: Props & { tx: Transaction }) {
   const [note, setNote] = useState(tx.note);
   const [amount, setAmount] = useState(String(tx.amount));
   const [categoryId, setCategoryId] = useState(tx.categoryId ?? "");
@@ -97,6 +98,9 @@ function EditForm({ tx, categories, onClose, onSaved }: Props & { tx: Transactio
       </div>
       {error && <p className="text-sm text-destructive">{error}</p>}
       <DialogFooter>
+        <Button type="button" variant="ghost" className="text-destructive sm:mr-auto" onClick={() => onDelete(tx)}>
+          ลบรายการ
+        </Button>
         <Button type="button" variant="outline" onClick={onClose}>
           ยกเลิก
         </Button>

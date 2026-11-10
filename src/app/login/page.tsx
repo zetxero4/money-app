@@ -47,7 +47,7 @@ export default function LoginPage() {
     <main className="flex flex-1 items-center justify-center p-4">
       <Card className="w-full max-w-sm">
         <CardHeader>
-          <div className="mb-2 flex size-10 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+          <div className="mb-2 flex size-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
             <Wallet className="size-5" />
           </div>
           <CardTitle>{register ? "สร้างบัญชีเจ้าของ" : "เข้าสู่ระบบ"}</CardTitle>

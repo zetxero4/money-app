@@ -22,7 +22,7 @@ function Change({ current, previous }: { current: number; previous: number }) {
   const pct = previous > 0 ? Math.round((Math.abs(diff) / previous) * 100) : null;
   const up = diff > 0;
   return (
-    <span className={cn("inline-flex items-center gap-0.5 text-xs", up ? "text-destructive" : "text-emerald-600 dark:text-emerald-400")}>
+    <span className={cn("inline-flex items-center gap-0.5 text-xs", up ? "text-destructive" : "text-brand")}>
       {up ? <ArrowUpRight className="size-3" /> : <ArrowDownRight className="size-3" />}
       {formatBaht(Math.abs(diff))}
       {pct !== null && ` (${pct}%)`}
@@ -80,7 +80,7 @@ function SummaryView() {
             <Card size="sm">
               <CardContent>
                 <p className="text-xs text-muted-foreground">รายรับ</p>
-                <p className="mt-1 text-2xl font-semibold tabular-nums text-emerald-600 dark:text-emerald-400">
+                <p className="mt-1 text-2xl font-semibold tabular-nums text-brand">
                   {formatBaht(data.current.incomeSatang)}
                 </p>
                 <p className="text-xs text-muted-foreground">ช่วงก่อน {formatBaht(data.previous.incomeSatang)}</p>
@@ -134,7 +134,7 @@ function SummaryView() {
                   <div key={c.categoryName} className="flex items-center gap-2 text-sm">
                     <CategoryIcon name={c.icon} className="size-4 text-muted-foreground" />
                     <span className="flex-1">{c.categoryName}</span>
-                    <span className="font-medium tabular-nums text-emerald-600 dark:text-emerald-400">{formatBaht(c.totalSatang)}</span>
+                    <span className="font-medium tabular-nums text-brand">{formatBaht(c.totalSatang)}</span>
                   </div>
                 ))}
               </CardContent>

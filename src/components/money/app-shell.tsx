@@ -37,7 +37,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-4 pb-24 sm:pb-8">
       <header className="flex items-center justify-between py-4">
         <Link href="/" className="flex items-center gap-2 font-semibold">
-          <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+          <span className="flex size-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
             <Wallet className="size-4" />
           </span>
           จดเงิน

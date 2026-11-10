@@ -97,3 +97,11 @@ describe("transactions", () => {
     expect(s.expenseChangeByCategory[0]).toEqual({ categoryName: "เครื่องดื่ม/กาแฟ", current: 100, previous: 30, change: 70 });
   });
 });
+
+describe("เดาหมวด", () => {
+  it("ชาไข่มุก = เครื่องดื่ม ไม่ใช่อาหาร", async () => {
+    const { db, userId } = await setup();
+    const [t] = await addTransactions(db, userId, [{ note: "ชาไข่มุก", amountSatang: 4500 }], "web");
+    expect(t.categoryName).toBe("เครื่องดื่ม/กาแฟ");
+  });
+});
